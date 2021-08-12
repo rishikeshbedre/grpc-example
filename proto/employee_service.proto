@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package employee;
+
+option go_package = "/employeePB";
+
+message HelloRequest {
+    string name = 1;
+}
+
+message HelloReply {
+    string message = 1;
+}
+
+service EmployeeService {
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
